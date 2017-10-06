@@ -19,6 +19,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
+<<<<<<< HEAD
   var itemlist = [];
   var itemprice = [];
   var string2 = [];
@@ -39,6 +40,22 @@ function viewCart() {
     var lastitem = string2.slice(-1);
     string2.splice(-1, 1, `and ${lastitem}`)
     return console.log(`${string} ${string2.join(`, `)}.`)
+=======
+  var itemlist = []
+  var string = `In your cart, you have`
+  if (cart.length === 0){
+  console.log(`Your shopping cart is empty.`)
+  } else if (cart.length === 1){
+    var itemlist = Object.keys(cart[0])
+    console.log(`${string} ${itemlist} at $${cart[0][`${itemlist[0]}`]}.`)
+  } else if (cart.length > 1){
+      for (var i = 0; i < cart.length; i++){
+    var itemlist = Object.keys(cart[`${i}`])
+    console.log(`${itemlist[0]} at $${cart[`${i}`][`${itemlist[0]}`]}.`)
+
+    }
+  }
+>>>>>>> 96988b6bec543170e0b38019405cbfb5019f3d5a
 }
 
 function total(){
